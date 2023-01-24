@@ -12,30 +12,28 @@ public class SecondActivity extends AppCompatActivity {
 
     public static final String EXTRA_REPLY = "com.example.twoactivities.extra.REPLY";
 
-    private EditText mReply;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        int textIndex = intent.getIntExtra(MainActivity.EXTRA_TEXT_INDEX, -1);
 
-        TextView textView = findViewById(R.id.text_message);
-        textView.setText(message);
+        TextView textView = findViewById(R.id.text);
+        switch (textIndex) {
 
-        mReply = findViewById(R.id.editText_second);
-    }
-
-    public void returnReply(View view) {
-
-        String reply = mReply.getText().toString();
-
-        Intent replyIntent = new Intent(this, MainActivity.class);
-        replyIntent.putExtra(EXTRA_REPLY, reply);
-        setResult(RESULT_OK, replyIntent);
-
-        finish();
+            case 0:
+                textView.setText(R.string.text_one);
+                break;
+            case 1:
+                textView.setText(R.string.text_two);
+                break;
+            case 2:
+                textView.setText(R.string.text_three);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + textIndex);
+        }
     }
 }

@@ -11,49 +11,43 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.example.twoactivities.extra.MESSAGE";
+    /*
+     * Challenge: Create an app with three Button elements labeled Text One,
+     * Text Two, and Text Three. When any of these Button elements are clicked,
+     * launch a second Activity. That second Activity should contain a
+     * ScrollView that displays one of three text passages (you can include
+     *  your choice of passages). Use an Intent to launch the second Activity
+     *  with extras to indicate which of the three passages to display.
+     */
+
+    public static final String EXTRA_TEXT_INDEX = "com.example.twoactivities.extra.TEXT_INDEX";
     public static final int TEXT_REQUEST = 1;
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-
-    private TextView mReplyHeadTextView;
-    private TextView mReplyTextView;
-    private EditText mMessageEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mReplyHeadTextView = findViewById(R.id.text_header_reply);
-        mReplyTextView = findViewById(R.id.text_message_reply);
-
-        mMessageEditText = findViewById(R.id.editText_main);
     }
 
-    public void launchSecondActivity(View view) {
+    public void launchSecondActivity(int textIndex) {
         Log.d(LOG_TAG, "Button clicked!");
 
-        String message = mMessageEditText.getText().toString();
-
         Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivityForResult(intent, TEXT_REQUEST);
+        intent.putExtra(EXTRA_TEXT_INDEX, textIndex);
+        startActivity(intent);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void textOne(View view) {
+        launchSecondActivity(0);
+    }
 
-        if (requestCode == TEXT_REQUEST) {
-            if (resultCode == RESULT_OK) {
-                String reply = data.getStringExtra(SecondActivity.EXTRA_REPLY);
-                mReplyTextView.setText(reply);
-                mReplyTextView.setVisibility(View.VISIBLE);
+    public void textTwo(View view) {
+        launchSecondActivity(1);
+    }
 
-                mReplyHeadTextView.setVisibility(View.VISIBLE);
-            }
-        }
-
+    public void textThree(View view) {
+        launchSecondActivity(2);
     }
 }
