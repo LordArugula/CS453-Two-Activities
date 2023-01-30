@@ -31,3 +31,5 @@ Receiving a reply from the second activity
 # Part three
 ## Code-Challenge
 See https://github.com/LordArugula/CS453-Two-Activities/tree/code-challenge
+
+> For Part one, see: https://github.com/LordArugula/CS453-Hello-World
