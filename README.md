@@ -1,4 +1,6 @@
-# CS453-Two-Activities
+# Assignment one
+
+# Part Two
 
 The Two-Activities app running:
 
@@ -25,3 +27,7 @@ Sending a reply back to the Main activity
 Receiving a reply from the second activity
 
 ![image](https://user-images.githubusercontent.com/41593388/215399561-5ca5358d-1f17-4552-b7b1-bf6263f57121.png)
+
+# Part three
+## Code-Challenge
+See https://github.com/LordArugula/CS453-Two-Activities/tree/code-challenge
