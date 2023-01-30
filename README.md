@@ -1,4 +1,5 @@
-# CS453-Two-Activities Code Challenge
+# Assignment one
+## Part three: Code Challenge
 
 ## Main Activity
 
@@ -16,3 +17,6 @@
 
 ![image](https://user-images.githubusercontent.com/41593388/215400526-7fecdfee-2d95-4199-a94c-f728a2b06d2a.png)
 
+> For Part one: see https://github.com/LordArugula/CS453-Hello-World
+
+> For Part two: see https://github.com/LordArugula/CS453-Two-Activities
