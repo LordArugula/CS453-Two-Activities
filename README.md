@@ -1,8 +1,8 @@
-# Assignment one
+# Assignment Three
 
-# Part Two
+# Part One
 
-The Two-Activities app running:
+The updated Two-Activities app running:
 
 ## Main activity
 
@@ -24,12 +24,7 @@ Sending a reply back to the Main activity
 
 ## Main activity
 
-Receiving a reply from the second activity
+Receiving a reply from the second activity.
+The main activity also saves and restores the reply message now.
 
 ![image](https://user-images.githubusercontent.com/41593388/215399561-5ca5358d-1f17-4552-b7b1-bf6263f57121.png)
-
-# Part three
-## Code-Challenge
-See https://github.com/LordArugula/CS453-Two-Activities/tree/code-challenge
-
-> For Part one, see: https://github.com/LordArugula/CS453-Hello-World
