@@ -1,6 +1,10 @@
 # Assignment Three
 
-# Part One
+## Part One - Android Codelab 02.2 Activity Lifecycle and State
+
+For the other half of part one, see: https://github.com/LordArugula/Implicit-Intents
+
+For part two, see: https://github.com/LordArugula/CS453-ExpenseTrackingApp
 
 The updated Two-Activities app running:
 
